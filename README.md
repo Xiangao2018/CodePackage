@@ -1,16 +1,4 @@
 # CodeDocs 
-## 待分类
-+ [策树算法](./00-待分类/%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95.md)
-+ [FFmpeg学习之视频播放器制作（一）-前言以及准备工作](./00-待分类/FFmpeg%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%E5%88%B6%E4%BD%9C%EF%BC%88%E4%B8%80%EF%BC%89-%E5%89%8D%E8%A8%80%E4%BB%A5%E5%8F%8A%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.md)
-+ [局域网内自签名证书以及测试代码](./00-待分类/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E4%BB%A5%E5%8F%8A%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81.md)
-+ [密码技术之基本介绍](./00-待分类/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.md)
-+ [WWDC 2020 - Platforms State of the Union](./00-待分类/WWDC%202020%20-%20Platforms%20State%20of%20the%20Union.md)
-+ [签名相关内容](./00-待分类/%E7%AD%BE%E5%90%8D%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9.md)
-+ [数据结构与算法](./00-待分类/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95.md)
-+ [Protocol Buffer 学习之基本概念](./00-待分类/Protocol%20Buffer%20%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
-+ [密码技术之对称加密](./00-待分类/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.md)
-+ [2. FFmpeg 历史、安装以及简单实用](./00-待分类/2.%20FFmpeg%20%E5%8E%86%E5%8F%B2%E3%80%81%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8.md)
-
 ## 设计模式
 + [策略模式](./01-设计模式/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.md)
 + [简单工厂、工厂方法、抽象工厂](./01-设计模式/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E3%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E3%80%81%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82.md)
@@ -27,3 +15,15 @@
 
 ## 数据结构
 + [数据结构与算法（1）-- 时间复杂度与空间复杂度](./04-数据结构/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%881%EF%BC%89--%20%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6.md)
+
+## 待分类
++ [策树算法](./99-待分类/%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95.md)
++ [FFmpeg学习之视频播放器制作（一）-前言以及准备工作](./99-待分类/FFmpeg%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%E5%88%B6%E4%BD%9C%EF%BC%88%E4%B8%80%EF%BC%89-%E5%89%8D%E8%A8%80%E4%BB%A5%E5%8F%8A%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.md)
++ [局域网内自签名证书以及测试代码](./99-待分类/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E4%BB%A5%E5%8F%8A%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81.md)
++ [密码技术之基本介绍](./99-待分类/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.md)
++ [WWDC 2020 - Platforms State of the Union](./99-待分类/WWDC%202020%20-%20Platforms%20State%20of%20the%20Union.md)
++ [签名相关内容](./99-待分类/%E7%AD%BE%E5%90%8D%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9.md)
++ [数据结构与算法](./99-待分类/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95.md)
++ [Protocol Buffer 学习之基本概念](./99-待分类/Protocol%20Buffer%20%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
++ [密码技术之对称加密](./99-待分类/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.md)
++ [2. FFmpeg 历史、安装以及简单实用](./99-待分类/2.%20FFmpeg%20%E5%8E%86%E5%8F%B2%E3%80%81%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8.md)
