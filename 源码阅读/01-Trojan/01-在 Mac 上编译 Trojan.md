@@ -35,6 +35,7 @@ ctest
 sudo make install
 
 ```
+
 当在进行 `cmake ..` 时候，你可能会遇到如下问题：
 
 ```shell
@@ -48,10 +49,11 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (find_package)
 
 ```
-其中表示 `OPENSSL_INCLUDE_DIR` 无法找打，因此在执行 cmake 的时候，可以使用 `-D`指定 openssl 的目录
+其中表示 `OPENSSL_INCLUDE_DIR` 无法找到，因此在执行 cmake 的时候，可以使用 `-D`指定 openssl 的目录
 
 ```shell
 cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl ../
 ```
 
 > brew install 安装软件一般都会放在 /usr/local/Cellar/，openssl 也放在里面，你也可以指定 /usr/local/Cellar/ 里面的目录
+> 如果安装了多个版本，指定你想用的版本目录即可
