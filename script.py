@@ -20,7 +20,6 @@ class Dir(object):
 
 def main():
     root = os.getcwd()
-    # print( current_dir )
     for dir in sorted(os.listdir(root)):
         if not dir.startswith(".") and os.path.isdir(dir):            
             if "-" in dir:
