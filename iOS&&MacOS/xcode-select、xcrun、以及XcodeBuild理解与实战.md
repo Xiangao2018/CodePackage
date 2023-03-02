@@ -58,3 +58,65 @@ xcrun --sdk iphoneos -f traitsutil
 
 ## 如何使用 command line tool 进行编译打包？
 
+在打包之前，了解一些工程结构内容是很有必要的。
+
+`xxxx.xcworkspace` 代表一个工程组，这个里面可以包含多个 `xxxx.project` 项目，典型就是使用 Cocoapods 管里的 workSpace，workspace 通过 `scheme` 来区分不同的 project
+
+`xxxx.project` 代表一个项目，每个 Project 可以单独进行编译。project 里面可以包含多个 Target， target 可以进行编译，target 通过名字来区分。
+
+![](./imgs/xcodebuild-list-project.png)
+
+
+workspace、project 以及 target 可以有自己的配置信息，可以通过 `xcodebuild -showBuildSettings -project xxx -target xxx` 查看。
+
+
+### Build
+
+最简单的可以直接在项目目录运行 `xcodebuild`，它会使用默认的配置信息
+
+```
+xcodebuild
+```
+    
+如果你有多个 project 或这你是用 workspace 来进行管理，那么你可能需要使用如下指令
+```
+# 运行指定的 project
+xcodebuild -project name.xcodeproj 
+
+# 运行 workspace 下面某个 project，使用 scheme来区分
+xcodebuild -workspace name.xcworkspace -scheme schemename
+```
+
+系统默认的 sdk 为 macosx，scheme 默认为第一个 scheme， configuration 默认使用 release，可以进行对应的指定
+```
+xcodebuild -project name.xcodeproj -sdk sdkname -scheme scheme -configuration Debug 
+```
+
+如果想要指定输出目录，可以使用 `-derivedDataPath` 来进行配置
+
+```
+xcodebuild -project name.xcodeproj -sdk sdkname -scheme scheme -configuration Debug  -derivedDataPath
+```
+默认 action 为 build， 你也可以显示定制，具体参数可以通过 `man xcodebuild` 查看
+
+```
+xcodebuild -project name.xcodeproj -sdk sdkname -scheme scheme -configuration Debug  -derivedDataPath build
+
+```
+
+### archive 以及 exportArchive
+
+将上序 build 的 action 更换为 archive， 也可以同时指定一个 archivePath
+
+```
+xcodebuild -project name.xcodeproj -sdk sdkname -scheme scheme -configuration Debug  -derivedDataPath build  -archivePath xcarchivepath
+```
+
+
+导出 ipa 使用 `exportArchive` , 其中 exportOptionsPlist 文件可以通过 `xcodebuild help` 查看即可
+
+```
+
+xcodebuild -exportArchive -archivePath xcarchivepath -exportPath destinationpath -exportOptionsPlist path
+
+```
