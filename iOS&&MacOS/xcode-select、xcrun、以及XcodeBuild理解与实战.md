@@ -120,3 +120,9 @@ xcodebuild -project name.xcodeproj -sdk sdkname -scheme scheme -configuration De
 xcodebuild -exportArchive -archivePath xcarchivepath -exportPath destinationpath -exportOptionsPlist path
 
 ```
+
+最好导出 dSYM 文件，这里面存储调试符号 
+
+```
+zip -r ${BUILD_OUTPUT_DIR}/dSYM_${VERSION}[${1}].zip ${BUILD_OUTPUT_DIR}/${1}/${PRODUCT_NAME}.xcarchive/dSYMs/${PRODUCT_NAME}.app.dSYM
+```
