@@ -42,7 +42,7 @@ slot
 
 + 英文版的 w3cschool 的 [HTML Tags](https://www.w3schools.com/tags/tag_comment.asp)一共有 124 个标签，与 ZMarkupParser 就差了 ` <!--...-->` 与 `<!DOCTYPE>` 这两个，并不支持 `hgroup`、`math`、`menu`、`search`与 `slot` 这五个。
 
-+ 在中文版的 [w3cschool](https://www.w3school.com.cn/tags/index.asp) 中一共定义了 130 个标签，除了上面提到的 140 个标签，还定义了 `command`、`isindex`、`keygen`、`menu`、`menuitem` 和 `xmp` 这 6 个。
++ 在中文版的 [w3cschool](https://www.w3school.com.cn/tags/index.asp) 中一共定义了 130 个标签，除了上面提到的 124 个标签，还定义了 `command`、`isindex`、`keygen`、`menu`、`menuitem` 和 `xmp` 这 6 个。
 
 
 
