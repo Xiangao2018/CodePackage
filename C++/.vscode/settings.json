@@ -55,6 +55,7 @@
         "algorithm": "cpp",
         "__availability": "cpp",
         "functional": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "set": "cpp"
     }
 }
