@@ -19,6 +19,11 @@ for( auto& elem : vec ) {}
 
 ## 容器（Containers）
 
++ 序列式容器（Sequence Containers）
++ 关联式容器（Associative Containers）
+
+![](./imgs/Containers.png)
+
 ### 数组（Array）
 
 ### Vector
@@ -41,6 +46,16 @@ for( auto& elem : vec ) {}
 + back() 
 
 标准库有一个 sort, 容器中也有个 sort
+
+![](./imgs/list.png)
+![](./imgs/list2.png)
+![](./imgs/list3.png)
+![](./imgs/list4.png)
+![](./imgs/list5.png)
+![](./imgs/Iterator.png)
+![](./imgs/iterator2.png)
+![](./imgs/traits.png)
+![](./imgs/iterator_traits.png)
 
 ### forward_list 
 
@@ -96,3 +111,9 @@ hashTable 结构
 ## 分配器 Allocator
 
 ![](./imgs/allocator.png)
+![](./imgs/allocators.png)
+
+
+
+
+ 

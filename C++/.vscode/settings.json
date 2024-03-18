@@ -56,6 +56,7 @@
         "__availability": "cpp",
         "functional": "cpp",
         "memory": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "__tree": "cpp"
     }
 }
