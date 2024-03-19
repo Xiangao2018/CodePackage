@@ -57,6 +57,10 @@
         "functional": "cpp",
         "memory": "cpp",
         "set": "cpp",
-        "__tree": "cpp"
+        "__tree": "cpp",
+        "list": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "__memory": "cpp"
     }
 }
