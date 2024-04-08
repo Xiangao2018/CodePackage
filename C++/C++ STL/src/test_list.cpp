@@ -11,5 +11,7 @@ namespace cplist {
         list<int> l1;
 
         cout << "sizeof(l1) = " << sizeof(l1) << endl;
+
+        l1.push_back(1);
     }
 }

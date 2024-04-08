@@ -26,6 +26,12 @@ for( auto& elem : vec ) {}
 
 ### 数组（Array）
 
+![](./imgs/array01.png)
+![](./imgs/array02.png)
+
+
+
+
 ### Vector
 
 内存中，地址可以扩展，两倍扩展
@@ -35,6 +41,22 @@ for( auto& elem : vec ) {}
 + back()
 + data()
 + capacity()
+
+![](./imgs/vector01.png)
+
+
+其中 `size()` 是通过函数 `end() - begin()` 来进行实现的
+
+![](./imgs/vector02.png)
+![](./imgs/vector03.png)
+
+其中的 `insert_aux()` 会被其他的调用，因此其中会有各种的判断
+
+![](./imgs/vector04.png)
+![](./imgs/vector05.png)
+![](./imgs/vector06.png)
+![](./imgs/vector07.png)
+
 
 ### list
 
@@ -63,10 +85,19 @@ for( auto& elem : vec ) {}
 单项链表是插入在前面还是在后面?
 
 
+![](./imgs/forwardlist01.png)
+
 ### deque 
 两边都可以扩充
 
-![](./imgs/deque.png)
+![](./imgs/deque01.png)
+![](./imgs/deque02.png)
+![](./imgs/deque03.png)
+![](./imgs/deque04.png)
+![](./imgs/deque05.png)
+
+
+
 
 ### Stack 
 
