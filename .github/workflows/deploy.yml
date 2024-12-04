@@ -1,0 +1,38 @@
+name: Build and Deploy docs
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支的提交，或根据需要更改为其他分支
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出源代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 安装 Python 和 MkDocs
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.13.0'  # 可以选择其他 Python 版本
+
+      - name: Install MkDocs and dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install mkdocs
+          
+      # 构建静态网站
+      - name: Build site with MkDocs
+        run: mkdocs build --site-dir site
+
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:Xiangao2018/xiangao2018.github.io.git
+          BRANCH: gh-pages
+          FOLDER: site
+          SSH_PRIVATE_KEY: ${{ secrets.PAGS_TOKEN }}
