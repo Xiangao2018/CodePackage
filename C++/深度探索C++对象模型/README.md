@@ -36,9 +36,32 @@ class member functions(三种)：static、nonstatic 和 virtual
 
 
 
-**多重继承与虚继承**
+### 1.3 对象的差异（An Object Distinction）
+
+C++ 一般有三种编程范式（书中称为 programming paradigms, 程序设计典范）
+
++ 面向过程（程序模型，procedural model）
++ 抽象数据类型（abstract data type mode, ADT）：抽象数据类型是一个数学模型，定义了一组数据及其操作，而不关心具体实现。它强调数据以及与之相关的操作，但不涉及实现细节
++ 面向对象模型（object-oriented model）： 面向对象模型典型特征是封装、继承与多态，例如 Bear 继承自 Anima
 
 
+C++中的多态需要通过**指针（pointers）** 或 **引用（references）** 操作才能完成
+
+C++多态有两种办法
+
+1. 使用指针或者引用，再配合虚函数的调用, 二者必须符合才行；
+2. 经由 dynamic_cast 和 typeid 运算符;
+
+![](./C++polymorphism.png)
+
+> 树上说明需要三种方法，但是实际上只有两种，单纯的指针操作并不会操作多态，必须由指针或者引用 + 虚函数才行，普通函数不会触发多态性质
+
+
+class object 所需要内存大小依赖于：
+
+1.nonstatic data member 的总和大小；
+2. 由于 alignment 的需求而填补（padding）上去的空间；
+3. 为了支持 virtual 而由内部产生的任何额外负担；
 
 
 
