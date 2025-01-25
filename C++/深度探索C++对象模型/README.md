@@ -59,11 +59,114 @@ C++多态有两种办法
 
 class object 所需要内存大小依赖于：
 
-1.nonstatic data member 的总和大小；
+1. nonstatic data member 的总和大小；
 2. 由于 alignment 的需求而填补（padding）上去的空间；
 3. 为了支持 virtual 而由内部产生的任何额外负担；
 
+## 第 2 章 构造函数语意学（The Semantics of Contructors）
 
+
+### 2.1 Default Constructor 的构建操作
+
+如果一个类没有构造函数，那么编辑器会在适当的时候合成一个默认的构造函数，但是这个构造函数一般是 trivial（浅薄而无能，没啥用）的，它不会去做一些**程序需要**的事情
+
+一下的四种情况讨论编辑器合成的构造函数 "nontrivial"
+
+
+### case 1: 带有 Default Constructor 的 Member class Object
+
+一个 class 没有构造函数，但是该类里面包含一个带有构造函数类
+
+```C++
+
+class Foo {
+public:
+	Foo();
+	Foo(int);
+};
+
+class Bar {
+public:
+	Foo foo;
+	char *str; //合成的默认构造函数并不会将 str 置空
+};
+
+
+```
+在上面代码中， 类 Foo 作为 类 Bar 的一个成员变量，类 Foo 有默认构造函数，因此编译器会为 Bar 合成一个默认的构造函数，会去调用 类 Foo 的默认构造函数， 类似于下面
+
+```C++
+
+// 合成一个默认构造函数，将成员变量的 foo 进行初始化，但不会去初始化 Bar::str 
+inline Bar::Bar() { 
+
+	// 伪代码
+	foo.Foo::Foo(); 
+}
+
+```
+
+如果类 Bar 存在默认构造函数（一个或者多个），那么编译器会对 Bar 的每一个默认构造函数进行扩张，调用每一个 Member class 的构造函数
+
+
+### case 2： 带有 Default  Constructor 的 Base class 
+
+如果子类（Derived class）没有默认构造函数，但是父类（Base class） 有默认构造函数，那么子类默认构造函数会被合成出来，调用父类的默认构造函数
+
+
+如果子类有多个构造函数，但没有 default constructor, 编译器会扩张现有的每一个 constructors, 将用以调用父类的默认构造函数，此时并不会去合成一个 default constructor（用户已经定义了）
+
+
+### case 3： 带有一个 Virtual Function 的 class
+
+一下两种情况需要合成 default  constructor
+
+1. class 声明（或继承）一个 virtual function
+2. class 派生自一个继承串链，其中有一个或更多的 virtual base classes;
+
+编译器需要在编译期间构建**虚函数表**以及**虚表指针**，编译器需要再构造期间创建虚表以及虚表指针
+
+```c++
+class Widget {
+public:
+	virtual void flip() = 0;
+};
+
+class Bell: public Widget {
+public:
+	void flip() override  { }
+};
+
+class Whistel: public Widget {
+public:
+	void flip() override  { }
+};
+
+void flip(const Widget& widget) { widget.flip(); } // 此处引发虚函数调用，需要进行动态调用
+
+
+```
+
+### case 4: 带有一个 Virtual Base class 的 class
+
+```c++
+class X { public: int i;};
+class A : public virtual X { public: int j;};
+class B : public virtual X { public: int d;};
+class C : public A, public B { public: int k;};
+
+```
+
+## 2.2 Copy Constructor 的构建操作
+
+有三种情况
+
++ 赋值运算 ` X x; X xx = x;`
++ 函数调用 Object 当做参数；
++ 函数返回 Object 对象；
+
+
+编译器会在必要的时候合成拷贝构造函数，它的操作是将非 object 成员变量一个个的复制过去，对于Object，将会调用 Object 的 copy constructor;
 
 
 
