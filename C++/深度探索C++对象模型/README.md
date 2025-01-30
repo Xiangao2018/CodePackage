@@ -168,6 +168,19 @@ class C : public A, public B { public: int k;};
 
 编译器会在必要的时候合成拷贝构造函数，它的操作是将非 object 成员变量一个个的复制过去，对于Object，将会调用 Object 的 copy constructor;
 
+```c++
+class X {
+public: 
+	X(const X& x);
+	int i;
+};
+
+```
+
+## 第 3 章 Data 语意学
+
+
+
 
 
 ## 疑问：
