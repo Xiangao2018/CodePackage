@@ -221,4 +221,3 @@ public:
 + Decorator 类在接口上表现为 is-a Component 的继承关系，即 Decorator 类继承了 Component 类所具有的所有接口，但在实现上又表现为 has-a Component 的组合关系，即 Decorator 类又实用了另外一个 Component 类。
 
 + Decorator 模式的目的并非解决“多子类衍生的多继承”问题， Decorator模式应用的要点在于解决"主体类在多个方向上的扩展功能" -- 是为了 ”装饰“含义。
-
