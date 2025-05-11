@@ -32,6 +32,13 @@
 ![](./imgs/mainCRTStartup%2001.png)
 ![](./imgs/mainCRTStartup%2002.png)
 
+### 04-heap init Startup的首要工程（上）
+
+![](./imgs/heap%20init%2001.png)
+![](./imgs/heap%20init%2002.png)
+![](./imgs/heap%20init%2003.png)
+![](./imgs/heap%20init%2004.png)
+
 
 ## 推荐书籍
 
