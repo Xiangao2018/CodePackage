@@ -1,41 +1,34 @@
 # /usr/bin/env python3
 
-
 import os
-import re
-import urllib.parse
+import yaml
 
-class Dir(object):
-    def __init__(self, path, dir_name):
-        self.subDirs = []
-        self.files = []
-        root = os.getcwd()
-        
-        for dir in os.listdir(path):
-            str = "+ [" + dir.rstrip('.md') + "]" + "(./" + dir_name + "/" + urllib.parse.quote(dir) + ")"
-            print(str)
-            
+def build_structure(base_path, relative_path=""):
+    items = []
+    full_path = os.path.join(base_path, relative_path)
+    entries = sorted(os.listdir(full_path))
 
+    for entry in entries:
+        entry_path = os.path.join(full_path, entry)
+        rel_entry_path = os.path.join(relative_path, entry)
 
+        if os.path.isdir(entry_path):
+            sub_items = build_structure(base_path, rel_entry_path)
+            if sub_items:
+                items.append({entry: sub_items})
+        elif entry.endswith(".md"):
+            display_name = entry.replace(".md", "")
+            yaml_path = os.path.join(relative_path, entry).replace("\\", "/")
+            items.append({display_name: yaml_path})
+    return items
 
-def main():
-    root = os.getcwd()
-    for dir in sorted(os.listdir(root)):
-        if not dir.startswith(".") and os.path.isdir(dir):            
-            if "-" in dir:
-                print( "\n## " + dir.split("-")[1] )
-            else:
-                print( "\n## " + dir)
+# 指定你想遍历的目录
+start_dir = "docs/设计模式"
 
-            path = os.path.join(root, dir)
-            Dir(path, dir)
-            # print(path)
-            
-            
-            
+# 获取目录名作为顶层 key，比如“设计模式”
+root_key = os.path.basename(start_dir)
+structure = {root_key: build_structure(start_dir)}
 
+# # 输出为 YAML（更漂亮的格式）
+print(yaml.dump(structure, allow_unicode=True, sort_keys=False, indent=2))
 
-
-
-if __name__ == '__main__':    
-    main()

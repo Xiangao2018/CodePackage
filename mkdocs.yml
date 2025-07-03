@@ -3,10 +3,45 @@ nav:
   - Home: index.md
   - About: about.md
   - 设计模式:
-    - 创建型-简单工厂、工厂方法、抽象工厂: 设计模式/创建型/简单工厂、工厂方法、抽象工厂.md
-    - 结构型-装饰器设计模式: 设计模式/结构型/装饰器设计模式.md
-    - 结构型-适配器模式: 设计模式/结构型/适配器模式.md
-    - 行为型-命令模式: 设计模式/行为型/命令模式.md
-    - 行为型-策略模式: 设计模式/行为型/策略模式.md
-    - 行为型-观察者模式: 设计模式/行为型/观察者模式.md
- 
+    - 01-组件协作类:
+      - Observer: 01-组件协作类/Observer.md
+      - Template Method: 01-组件协作类/Template Method.md
+      - 策略模式: 01-组件协作类/策略模式.md
+      - 组件协作模式: 01-组件协作类/组件协作模式.md
+    - 02-单一职责模式:
+      - Bridge: 02-单一职责模式/Bridge.md
+      - Decorator: 02-单一职责模式/Decorator.md
+      - 单一职责模式: 02-单一职责模式/单一职责模式.md
+    - 03-对象创建:
+      - Abstract Factory: 03-对象创建/Abstract Factory.md
+      - Factory Method: 03-对象创建/Factory Method.md
+      - Prototype: 03-对象创建/Prototype.md
+      - builder: 03-对象创建/builder.md
+    - 04-接口隔离:
+      - Adapter 适配器: 04-接口隔离/Adapter 适配器.md
+      - Facade(门面模式): 04-接口隔离/Facade(门面模式).md
+      - Mediator 中介者: 04-接口隔离/Mediator 中介者.md
+      - Proxy(代理模式): 04-接口隔离/Proxy(代理模式).md
+    - 05-状态变化:
+      - Memento 备忘录: 05-状态变化/Memento 备忘录.md
+      - State 状态模式: 05-状态变化/State 状态模式.md
+    - 06-数据结构:
+      - Chain of Resposibility 职责链: 06-数据结构/Chain of Resposibility 职责链.md
+      - Composite 组合: 06-数据结构/Composite 组合.md
+      - Iterator 迭代器: 06-数据结构/Iterator 迭代器.md
+    - 07-行为变化:
+      - Command 命令模式: 07-行为变化/Command 命令模式.md
+    - 08-领域问题:
+      - Interpreter 解析器: 08-领域问题/Interpreter 解析器.md
+    - 创建型:
+      - 简单工厂、工厂方法、抽象工厂: 创建型/简单工厂、工厂方法、抽象工厂.md
+    - 结构型:
+      - 装饰器设计模式: 结构型/装饰器设计模式.md
+      - 适配器模式: 结构型/适配器模式.md
+    - 行为型:
+      - 命令模式: 行为型/命令模式.md
+      - 策略模式: 行为型/策略模式.md
+      - 观察者模式: 行为型/观察者模式.md
+    - 设计模式总览: 设计模式总览.md
+    - 设计模式的分类: 设计模式的分类.md
+
